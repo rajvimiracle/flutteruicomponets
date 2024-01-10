@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutteruicomponets/componets/loginandregister/animatedbackgroundpage.dart';
-import 'package:flutteruicomponets/componets/loginandregister/darkloginpage.dart';
-import 'package:flutteruicomponets/componets/loginandregister/lightloginpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/loginpage/animatedbackgroundpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/loginpage/darkloginpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/loginpage/lightloginpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/logilistscreen/loginandregisterListScreen.dart';
-import 'package:flutteruicomponets/componets/loginandregister/simpleloginpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/loginpage/simpleloginpage.dart';
 import 'package:flutteruicomponets/routes/route/routes.dart';
 import 'package:get/get.dart';
 

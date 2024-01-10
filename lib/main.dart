@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 import 'package:flutteruicomponets/componets/loginandregister/logilistscreen/loginandregisterListScreen.dart';
+import 'package:flutteruicomponets/componets/loginandregister/loginpage/animatedbackgroundpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/loginpage/darkloginpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/loginpage/lightloginpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/registerpage/animatedregisterpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/registerpage/darkregisterpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/registerpage/lightregisterpage.dart';
 import 'package:flutteruicomponets/routes/route/routes.dart';
 import 'package:flutteruicomponets/routes/route/screen.dart';
 import 'package:get/get.dart';
@@ -20,14 +26,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlutterSizer(
       builder: (context, orientation, screenType) {
-        return GetMaterialApp(
+        return MaterialApp(
           debugShowCheckedModeBanner: false,
             title: 'Flutter Sizer Example',
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            initialRoute: Routes.loginpage,
-         getPages: Screens.routes,
+         home: LightloginRegistorpage(),
+         //    initialRoute: Routes.loginpage,
+         // getPages: Screens.routes,
         );
       },
     );
