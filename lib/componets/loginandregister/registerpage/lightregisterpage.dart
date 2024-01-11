@@ -22,7 +22,7 @@ class LightloginRegistorpage extends StatelessWidget {
           ),
           Column(
             children: [
-              Padding(padding: EdgeInsets.all(70),
+              Padding(padding: EdgeInsets.all(90),
                 child: Center(
                   child: CircleAvatar(
                     radius: 40,

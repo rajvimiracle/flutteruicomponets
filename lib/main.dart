@@ -4,9 +4,11 @@ import 'package:flutteruicomponets/componets/loginandregister/logilistscreen/log
 import 'package:flutteruicomponets/componets/loginandregister/loginpage/animatedbackgroundpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/loginpage/darkloginpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/loginpage/lightloginpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/loginpage/simpleloginpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/registerpage/animatedregisterpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/registerpage/darkregisterpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/registerpage/lightregisterpage.dart';
+import 'package:flutteruicomponets/componets/loginandregister/registerpage/simpleregisterpage.dart';
 import 'package:flutteruicomponets/routes/route/routes.dart';
 import 'package:flutteruicomponets/routes/route/screen.dart';
 import 'package:get/get.dart';
@@ -32,7 +34,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-         home: LightloginRegistorpage(),
+         home: SimpleRegistorPage(),
          //    initialRoute: Routes.loginpage,
          // getPages: Screens.routes,
         );

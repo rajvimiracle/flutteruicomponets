@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
 
-class Simpleloginpage extends StatefulWidget {
-  const Simpleloginpage({super.key});
+class SimpleRegistorPage extends StatefulWidget {
+  const SimpleRegistorPage({super.key});
 
   @override
-  State<Simpleloginpage> createState() => _SimpleloginpageState();
+  State<SimpleRegistorPage> createState() => _SimpleRegistorPageState();
 }
 
-class _SimpleloginpageState extends State<Simpleloginpage> {
+class _SimpleRegistorPageState extends State<SimpleRegistorPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passController = TextEditingController();
+  TextEditingController nameController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,12 +31,12 @@ class _SimpleloginpageState extends State<Simpleloginpage> {
                   children: [
                     Align(
                       alignment: Alignment.center,
-                      child: Text("LOGIN ",
-                      style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                          color: Colors.cyan,
-                          fontSize: 25),
-                    ),
+                      child: Text("REGISTER ",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.cyan,
+                            fontSize: 25),
+                      ),
                     ),
                     Image.asset('assets/images/img_hello.png',
                         height: 25.h, width: 30.w),
@@ -44,6 +45,11 @@ class _SimpleloginpageState extends State<Simpleloginpage> {
               ),
               Column(
                 children: [
+                  CustomSimpleTextFiled(
+                    controller: nameController,
+                    lebal: 'UaserName',
+                    prefixIcon: Icon(Icons.person_2, color: Colors.cyan),
+                  ),
                   CustomSimpleTextFiled(
                     controller: emailController,
                     lebal: 'Email',
@@ -54,21 +60,16 @@ class _SimpleloginpageState extends State<Simpleloginpage> {
                     lebal: 'Password',
                     prefixIcon: Icon(Icons.lock, color: Colors.cyan),
                   ),
-                  SizedBox(height: 7.w),
-                  Align(
-                    alignment: Alignment.bottomRight,
-                    child: Text("Forgot Password?",style: TextStyle(color: Colors.cyan,fontSize: 15),),
-                  ),
                   CustomElevtedButton3(
-                      title: "LOGIN",),
-                  SizedBox(height: 10.h,),
+                    title: "REGISTER",),
+                  // SizedBox(height: 2.h,),
                   RichText(
                     text: TextSpan(
-                        text: 'Not Register?',
+                        text: 'Alareay Register?',
                         style: TextStyle(fontSize: 15.sp, color: Colors.grey),
                         children: [
                           TextSpan(
-                            text: ' Create Account ',
+                            text: ' Log in',
                             style: TextStyle(fontSize: 17.sp, color: Colors.blue,fontWeight: FontWeight.bold),
                           ),
                         ]),
