@@ -4,6 +4,7 @@ import 'package:flutteruicomponets/componets/loginandregister/logilistscreen/log
 import 'package:flutteruicomponets/componets/loginandregister/loginpage/animatedbackgroundpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/loginpage/darkloginpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/loginpage/lightloginpage.dart';
+
 import 'package:flutteruicomponets/componets/loginandregister/loginpage/simpleloginpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/registerpage/animatedregisterpage.dart';
 import 'package:flutteruicomponets/componets/loginandregister/registerpage/darkregisterpage.dart';
@@ -12,6 +13,7 @@ import 'package:flutteruicomponets/componets/loginandregister/registerpage/simpl
 import 'package:flutteruicomponets/routes/route/routes.dart';
 import 'package:flutteruicomponets/routes/route/screen.dart';
 import 'package:get/get.dart';
+
 
 import 'componets/loginandregister/logilistscreen/loginandregisterListScreen.dart';
 
@@ -28,15 +30,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlutterSizer(
       builder: (context, orientation, screenType) {
-        return MaterialApp(
+        return GetMaterialApp(
           debugShowCheckedModeBanner: false,
             title: 'Flutter Sizer Example',
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-         home: SimpleRegistorPage(),
-         //    initialRoute: Routes.loginpage,
-         // getPages: Screens.routes,
+         // home: SimpleRegistorPage(),
+             initialRoute: Routes1.listpagge,
+            getPages: Screens1.routes1,
         );
       },
     );

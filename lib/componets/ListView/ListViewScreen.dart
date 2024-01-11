@@ -1,23 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sizer/flutter_sizer.dart';
+import 'package:flutteruicomponets/componets/ListView/listviewmodel.dart';
 import 'package:flutteruicomponets/componets/loginandregister/logilistscreen/loginregistermodel.dart';
 import 'package:flutteruicomponets/routes/route/routes.dart';
 import 'package:get/get.dart';
 
-/*List datas = [
-  "Dark Login",
-  "Animated Background Login",
-  "Light Login",
-  "Simple Login",
-];*/
 
-class LoginRegisterListScreen extends StatelessWidget {
-  List<LoginRegisterModel> loginregister = [
-    LoginRegisterModel(text: "Dark Login", screen: "/darkloginpage"),
-    LoginRegisterModel(
-        text: "Animated Background Login", screen: "/animatedpage"),
-    LoginRegisterModel(text: "Light Login", screen: "/lightpage"),
-    LoginRegisterModel(text: "Simple Login", screen: "/simplepage"),
+class ListViewScreen extends StatelessWidget {
+  List<ListViewModel> listviewpage = [
+    ListViewModel(text: "Simple List", screen: "/simplelist"),
+    ListViewModel(text: "Bouncy List", screen: "/bouncylist"),
+    ListViewModel(text: "Sildable List", screen: "/slidablelist"),
+    ListViewModel(text: "Swappable List", screen: "/swappblelist"),
+    ListViewModel(text: "Recorderable List", screen: "/reoderablelist"),
+    ListViewModel(text: "Expandable List", screen: "/expanblelist"),
+    ListViewModel(text: "Selection List", screen: "/selectionlist"),
   ];
 
   @override
@@ -26,7 +23,7 @@ class LoginRegisterListScreen extends StatelessWidget {
       appBar: AppBar(
         leading: Icon(Icons.arrow_back, color: Colors.white),
         title: Text(
-          "Login and Register Page",
+          "List",
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Color(0xff77BAC7),
@@ -34,12 +31,12 @@ class LoginRegisterListScreen extends StatelessWidget {
 
       // backgroundColor: Color(0xffDBF9DB),
       body: ListView.builder(
-        itemCount: loginregister.length,
+        itemCount: listviewpage.length,
         shrinkWrap: true,
         itemBuilder: (context, index) {
           return InkWell(
             onTap: () {
-              Get.toNamed(loginregister[index].screen);
+              Get.toNamed(listviewpage[index].screen);
             },
             child: Padding(
               padding: const EdgeInsets.all(15.0),
@@ -50,14 +47,12 @@ class LoginRegisterListScreen extends StatelessWidget {
                   margin: EdgeInsets.symmetric(vertical: 5),
                   width: 2.w,
                   decoration: BoxDecoration(
-                    border: Border.all(
-                      color: Color(0xff43C6DB)
-                    ),
+                    border: Border.all(color: Color(0xff43C6DB)),
                     borderRadius: BorderRadius.circular(7),
                   ),
                   child: Center(
                     child: Text(
-                      loginregister[index].text,
+                      listviewpage[index].text,
                       style: TextStyle(
                         color: Color(0xff4545FF),
                       ),
